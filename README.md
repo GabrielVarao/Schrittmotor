@@ -72,6 +72,8 @@ A FSM(finite state machine) was chosen, because of the ease of documentation and
 
 The speed change feature was also added, because it's a easy function to add and it provides much more control over the stepper motor.
 
+If there are any questions why the solution was chosen like this, just ask.
+
 ## Sources
 
 All sources for images are as links in the README.md when view raw.
