@@ -7,6 +7,7 @@ Simple Stepmotor controller with speed and direction change.
 - Microchip Studio with support for AVR and XC8
 - ATmega 2560 with 
 controller for Stepmotor
+- For documentation it's recommended to use VS Code with a Drawio plugin
 
 ## Initial Setup
 
@@ -20,13 +21,13 @@ After the Initial Setup you can build the project with `Start without debugging`
 
 ## State Event
 
-![Diagram-State-Event.drawio.svg](./readme/State-Event.drawio.svg)
+![Diagram-State-Event.drawio.svg](./readme/State-Event.svg)
 
 ## Connection Diagramm
 
 The following connection diagramm is for a PICado ATmega 2560 board with a corresponding break-out-board and a stepper motor module containing a driver.
 
-![Diagram-HW-Connection.drawio.svg](./readme/HW-Connection.drawio.svg)
+![Diagram-HW-Connection.drawio.svg](./readme/HW-Connection.svg)
 
 ## Step Motor
 

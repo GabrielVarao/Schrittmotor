@@ -1,60 +1,63 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
-  <diagram name="Seite-1" id="jsRwzOiewUEVqh6icujb">
-    <mxGraphModel dx="989" dy="637" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="8AZU2fkOD_rNPI7TGieg-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=#00e1ff;" vertex="1" parent="1">
-          <mxGeometry x="130" y="80" width="530" height="230" as="geometry" />
-        </mxCell>
-        <mxCell id="8AZU2fkOD_rNPI7TGieg-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="8AZU2fkOD_rNPI7TGieg-1" target="8AZU2fkOD_rNPI7TGieg-4">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="8AZU2fkOD_rNPI7TGieg-1" value="ATmega 2560" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="330" y="150" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="8AZU2fkOD_rNPI7TGieg-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="8AZU2fkOD_rNPI7TGieg-2" target="8AZU2fkOD_rNPI7TGieg-1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="8AZU2fkOD_rNPI7TGieg-2" value="Buttons at PORTA" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="170" y="150" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="8AZU2fkOD_rNPI7TGieg-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8AZU2fkOD_rNPI7TGieg-4" target="8AZU2fkOD_rNPI7TGieg-8">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="8AZU2fkOD_rNPI7TGieg-4" value="Leds at PORTC" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="500" y="150" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="8AZU2fkOD_rNPI7TGieg-7" value="Used part of PICADO" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="335" y="100" width="110" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="8AZU2fkOD_rNPI7TGieg-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8AZU2fkOD_rNPI7TGieg-8" target="8AZU2fkOD_rNPI7TGieg-12">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="8AZU2fkOD_rNPI7TGieg-8" value="PORTC Header" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="500" y="280" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="8AZU2fkOD_rNPI7TGieg-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="8AZU2fkOD_rNPI7TGieg-10" target="8AZU2fkOD_rNPI7TGieg-2">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="8AZU2fkOD_rNPI7TGieg-10" value="PORTA Header" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="170" y="280" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="8AZU2fkOD_rNPI7TGieg-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.001;entryY=0.296;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8AZU2fkOD_rNPI7TGieg-12" target="8AZU2fkOD_rNPI7TGieg-14">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="8AZU2fkOD_rNPI7TGieg-16" value="Bits[0:3] and&amp;nbsp;&lt;div&gt;GND/+5V&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8AZU2fkOD_rNPI7TGieg-15">
-          <mxGeometry x="-0.1247" y="-2" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="8AZU2fkOD_rNPI7TGieg-12" value="Breakout Board" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="500" y="380" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="8AZU2fkOD_rNPI7TGieg-14" value="Stepmotor with Driver:&lt;div&gt;Bit0 &amp;gt;&amp;nbsp;&lt;span style=&quot;background-color: rgb(16, 20, 24); color: rgb(234, 236, 240); font-family: sans-serif; text-align: start;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Φ&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;div&gt;Bit1 &amp;gt;&amp;nbsp;&lt;span style=&quot;background-color: rgb(16, 20, 24); color: rgb(234, 236, 240); font-family: sans-serif; text-align: start;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Φ2&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;Bit2 &amp;gt;&amp;nbsp;&lt;span style=&quot;background-color: rgb(16, 20, 24); color: rgb(234, 236, 240); font-family: sans-serif; text-align: start;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Φ3&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;Bit3 &amp;gt;&amp;nbsp;&lt;span style=&quot;background-color: rgb(16, 20, 24); color: rgb(234, 236, 240); font-family: sans-serif; text-align: start;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Φ4&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="180" y="380" width="210" height="100" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram name="Seite-1" id="jsRwzOiewUEVqh6icujb">
+        <mxGraphModel dx="729" dy="1325" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#FFFFFF" math="0" shadow="0" adaptiveColors="auto">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fontColor=none;noLabel=1;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="70" width="550" height="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="8AZU2fkOD_rNPI7TGieg-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=#00e1ff;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="80" width="530" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="8AZU2fkOD_rNPI7TGieg-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="8AZU2fkOD_rNPI7TGieg-1" target="8AZU2fkOD_rNPI7TGieg-4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8AZU2fkOD_rNPI7TGieg-1" value="&lt;font&gt;ATmega 2560&lt;/font&gt;&lt;div&gt;&lt;font&gt;16MHz&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="150" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8AZU2fkOD_rNPI7TGieg-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="8AZU2fkOD_rNPI7TGieg-2" target="8AZU2fkOD_rNPI7TGieg-1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8AZU2fkOD_rNPI7TGieg-2" value="&lt;font&gt;Buttons at PORTA&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="150" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8AZU2fkOD_rNPI7TGieg-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="8AZU2fkOD_rNPI7TGieg-4" target="8AZU2fkOD_rNPI7TGieg-8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8AZU2fkOD_rNPI7TGieg-4" value="&lt;font&gt;Leds at PORTC&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="150" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8AZU2fkOD_rNPI7TGieg-7" value="&lt;font&gt;Used part of PICADO&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="335" y="100" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8AZU2fkOD_rNPI7TGieg-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="8AZU2fkOD_rNPI7TGieg-8" target="8AZU2fkOD_rNPI7TGieg-12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8AZU2fkOD_rNPI7TGieg-8" value="&lt;font&gt;PORTC Header&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8AZU2fkOD_rNPI7TGieg-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="8AZU2fkOD_rNPI7TGieg-10" target="8AZU2fkOD_rNPI7TGieg-2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8AZU2fkOD_rNPI7TGieg-10" value="&lt;font&gt;PORTA Header&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8AZU2fkOD_rNPI7TGieg-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.001;entryY=0.296;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="8AZU2fkOD_rNPI7TGieg-12" target="8AZU2fkOD_rNPI7TGieg-14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8AZU2fkOD_rNPI7TGieg-16" value="&lt;font&gt;Bits[0:3] and&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font&gt;&lt;span&gt;G&lt;/span&gt;ND/+5V&lt;/font&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="8AZU2fkOD_rNPI7TGieg-15" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1247" y="-2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8AZU2fkOD_rNPI7TGieg-12" value="&lt;font&gt;Breakout Board&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="380" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8AZU2fkOD_rNPI7TGieg-14" value="&lt;font style=&quot;&quot;&gt;Stepmotor with Driver:&lt;/font&gt;&lt;div&gt;&lt;font&gt;&lt;font style=&quot;&quot;&gt;&lt;font&gt;&lt;font style=&quot;&quot;&gt;Bit0 &amp;gt;&amp;nbsp;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;span style=&quot;font-family: sans-serif; text-align: start;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Φ&lt;/font&gt;&lt;/span&gt;&lt;font style=&quot;&quot;&gt;1&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&lt;font style=&quot;&quot;&gt;Bit1 &amp;gt;&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); font-family: sans-serif; text-align: start;&quot;&gt;&lt;font style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); font-size: 13px;&quot;&gt;Φ2&lt;/font&gt;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&lt;font style=&quot;&quot;&gt;Bit2 &amp;gt;&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); font-family: sans-serif; text-align: start;&quot;&gt;&lt;font style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); font-size: 13px;&quot;&gt;Φ3&lt;/font&gt;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;Bit3 &amp;gt;&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); font-family: sans-serif; text-align: start;&quot;&gt;&lt;font style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); font-size: 13px;&quot;&gt;Φ4&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="380" width="210" height="100" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>
