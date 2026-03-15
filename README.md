@@ -1,95 +1,268 @@
+
 # 01_SchrittMot
 
-Simple Stepmotor controller with speed and direction change.
+![AVR](https://img.shields.io/badge/Platform-AVR-blue)
+![Microcontroller](https://img.shields.io/badge/MCU-ATmega2560-green)
+![Language](https://img.shields.io/badge/Language-C-orange)
+![Build](https://img.shields.io/badge/Build-Microchip%20Studio-red)
+![Status](https://img.shields.io/badge/Status-Stable-success)
 
-## Requirements
+A lightweight **stepper motor controller implementation** for the **ATmega2560**.
+The firmware provides runtime control over **motor direction and stepping speed**, using a **finite state machine (FSM)** architecture for clarity and extensibility.
 
-- Microchip Studio with support for AVR and XC8
-- ATmega 2560 with 
-controller for Stepmotor
-- For documentation it's recommended to use VS Code with a Drawio plugin
+The project was developed and tested using a **PICado ATmega2560 development board**, paired with a **stepper motor driver module**.
 
-## Initial Setup
+---
 
-1. Put the [AVRdude](https://github.com/ml3rc/01_SchrittMot/tree/main/readme/AVRdude) tool into `C:\Program Files (x86)\Atmel\Studio\7.0\tools\` (correct the version number)
+# Table of Contents
 
-2. Correct the Paths and COM-port in `Microchip Studio > Project > 01_SchrittMot Properties... > Tool > Custom programming tool > Command` to match your repo location.
+- [Overview](#overview)
+- [Requirements](#requirements)
+- [Project Setup](#project-setup)
+- [Building and Flashing](#building-and-flashing)
+- [System Architecture](#system-architecture)
+- [Hardware Setup](#hardware-setup)
+- [Stepper Motor Operation](#stepper-motor-operation)
+- [Design Decisions](#design-decisions)
+- [Validation and Testing](#validation-and-testing)
+- [References](#references)
 
-## Building
+---
 
-After the Initial Setup you can build the project with `Start without debugging` (green start sign with a hole in the middle)
+# Overview
 
-## State Event
+This project demonstrates a minimal but structured implementation of **stepper motor control firmware**.
+
+The firmware supports:
+
+- Clockwise and anticlockwise rotation
+- Dynamic speed adjustment
+- Deterministic motor control via a **finite state machine**
+
+The system is intentionally designed to remain **simple and maintainable**, while still demonstrating good embedded software practices.
+
+---
+
+# Requirements
+
+To compile and run this project, the following tools and hardware are required.
+
+## Development Tools
+
+- **Microchip Studio**
+  - AVR toolchain
+  - XC8 compiler support
+
+## Hardware
+
+- **ATmega2560 development board**
+- **Stepper motor driver module**
+- Compatible **stepper motor**
+
+## Documentation Tools (Optional)
+
+For editing diagrams and documentation:
+
+- **VS Code**
+- **Draw.io extension**
+
+---
+
+# Project Setup
+
+Before building the project, some configuration is required.
+
+## 1. Install AVRdude
+
+Download and place the AVRdude tool from:
+
+https://github.com/ml3rc/01_SchrittMot/tree/main/readme/AVRdude
+
+into:
+
+C:\Program Files (x86)\Atmel\Studio\7.0\tools\
+
+Adjust the directory if your Microchip Studio version differs.
+
+---
+
+## 2. Configure Programming Tool
+
+Inside Microchip Studio:
+
+Project → 01_SchrittMot Properties
+
+Navigate to:
+
+Tool → Custom programming tool → Command
+
+Update the following parameters:
+
+- Repository path
+- COM port used by the development board
+
+---
+
+# Building and Flashing
+
+Once the environment has been configured, the project can be built and uploaded directly from **Microchip Studio**.
+
+Use the option:
+
+Start Without Debugging
+
+This will:
+
+1. Compile the firmware
+2. Flash it onto the ATmega2560
+3. Start execution immediately
+
+---
+
+# System Architecture
+
+The control logic is implemented as a **Finite State Machine (FSM)**.
+
+This approach provides:
+
+- Predictable execution flow
+- Clear system states
+- Easy extensibility for future features
+
+For example, introducing an additional mode such as `IDLE` or `PAUSE` would only require defining a new state and transition.
+
+## State Event Diagram
 
 ![Diagram-State-Event.drawio.svg](./readme/State-Event.svg)
 
-## Connection/HW Diagramm
+---
 
-The following connection diagramm is for a PICado ATmega 2560 board with a corresponding break-out-board and a stepper motor module containing a driver.
+# Hardware Setup
+
+The firmware was tested using the following hardware stack:
+
+- PICado ATmega2560 development board
+- Breakout board
+- Stepper motor driver module
+- Stepper motor
+
+## Hardware Connection Diagram
 
 ![Diagram-HW-Connection.drawio.svg](./readme/HW-Connection.svg)
 
-## Step Motor
+The development board provides a **5V supply voltage**, and the driver circuitry required for the stepper motor is integrated on the board.
 
-The stepper motor used for this project has following schematic:
+---
+
+# Stepper Motor Operation
+
+The stepper motor used in this project is illustrated below.
 
 ![IMG-Stepper-Motor](https://plc247.com/wp-content/uploads/2020/07/variable-reluctance-stepper.jpg)
 
-The Vcc on the dev board is 5V, the dev board also contains the driver.
+## Operating Parameters
 
-The maximal step rate is 300 steps per second. The default step rate is specified to be 20 steps per second. The Task specified following sequence for driving the motor:
+| Parameter | Value |
+|-----------|------|
+| Default step rate | 20 steps/sec |
+| Maximum step rate | 300 steps/sec |
+| Supply voltage | 5V |
+
+---
+
+## Original Step Sequence
+
+The original task specification defined the following step sequence:
 
 ```c
 const uint8_t STEPS[] = {
-		0b00001001,
-		0b00000011,
-		0b00000110,
-		0b00001100
+    0b00001001,
+    0b00000011,
+    0b00000110,
+    0b00001100
 };
 ```
 
-But this way of driving the motor would miss half of the steps available so the sequence used is the following:
+This sequence only utilizes **half of the motor’s possible stepping positions**.
+
+---
+
+## Improved Step Sequence
+
+To achieve smoother rotation and increased resolution, an **extended half-step sequence** was implemented:
 
 ```c
 const uint8_t STEPS[] = {
-		0b00001001,
-		0b00000001,
-		0b00000011,
-		0b00000010,
-		0b00000110,
-		0b00000100,
-		0b00001100,
-		0b00001000
+    0b00001001,
+    0b00000001,
+    0b00000011,
+    0b00000010,
+    0b00000110,
+    0b00000100,
+    0b00001100,
+    0b00001000
 };
 ```
 
-The following gif represents the inner working of the stepper motor, note the the inbetween-steps where two coils are on are not shown...:
+This method activates **intermediate coil states**, resulting in:
+
+- smoother motion
+- finer positioning
+- improved mechanical behavior
+
+---
+
+## Stepper Motor Visualization
+
+The animation below demonstrates the internal working principle of a stepper motor.
+
+Note that intermediate states where **two coils are energized simultaneously** are not represented in the animation.
 
 ![GIF-Inner-Working-Stepper-Motor](https://electricdiylab.com/wp-content/uploads/2019/12/STEPPER-2.gif)
 
-## Why this Solution?
+---
 
-A FSM(finite state machine) was chosen, because of the ease of documentation and implementation. For example when a new mode has to be added named `IDLE` it can just be added as a new state without much work.
+# Design Decisions
 
-No interrupts were used, because of the simple nature of this project.
+Several architectural decisions were made to keep the implementation clean and understandable.
 
-The speed change feature was also added, because it's a easy function to add and it provides much more control over the stepper motor.
+## Finite State Machine
 
-If there are any questions why the solution was chosen like this, just ask.
+The FSM structure simplifies:
 
-## Testing
+- system reasoning
+- debugging
+- future feature expansion
 
-All the funcitons of this SW were tested on the PIcado + breakout-board + Steppermotor(with controller) combinations mentioned [above](#connectionhw-diagramm):
+## No Interrupt Usage
+
+Interrupts were intentionally avoided in this implementation.
+
+The application logic is straightforward and deterministic, so introducing interrupt-based control would unnecessarily complicate the design.
+
+## Adjustable Speed Control
+
+Speed adjustment was included as an additional feature because:
+
+- it requires minimal additional complexity
+- it significantly improves system usability
+
+---
+
+# Validation and Testing
+
+All functionality was verified on the hardware configuration described above.
 
 | Step | Action | Expected Result | Result | Pass/Fail |
 |:-:|:-:|:-:|:-:|:-:|
-| **0**   | Powerup | Motor at 20 steps/sec. Clockwise | Motor at 20 steps/sec. Clockwise | Pass |
-| **1**   | Press B_DIRECTION_ANTICLOCKWISE | Motor turns anticlockwise | Motor turns anticlockwise | Pass |
-| **2**   | Press B_DIRECTION_CLOCKWISE | Motor turns clockwise | Motor turns clockwise | Pass |
-| **3**   | Press B_SPEEDUP | Motor turns faster | Motor turns faster | Pass |
-| **4**   | Press B_SPEEDDOWN 2 times | Motor turns slower | Motor turns slower | Pass |
+| 0 | Power on | Motor rotates clockwise at 20 steps/sec | Motor rotates clockwise at 20 steps/sec | Pass |
+| 1 | Press B_DIRECTION_ANTICLOCKWISE | Motor rotates anticlockwise | Motor rotates anticlockwise | Pass |
+| 2 | Press B_DIRECTION_CLOCKWISE | Motor rotates clockwise | Motor rotates clockwise | Pass |
+| 3 | Press B_SPEEDUP | Motor speed increases | Motor speed increases | Pass |
+| 4 | Press B_SPEEDDOWN twice | Motor speed decreases | Motor speed decreases | Pass |
 
+---
 
-## Sources
+# References
 
-All sources for images are as links in the README.md when view raw.
+All images used in this documentation are linked directly in the README file and reference their original sources when viewed in raw format.
