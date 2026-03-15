@@ -77,6 +77,19 @@ The speed change feature was also added, because it's a easy function to add and
 
 If there are any questions why the solution was chosen like this, just ask.
 
+## Testing
+
+All the funcitons of this SW were tested on the PIcado + breakout-board + Steppermotor(with controller) combinations mentioned [above](#connectionhw-diagramm):
+
+| Step | Action | Expected Result | Result | Pass/Fail |
+|:-:|:-:|:-:|:-:|:-:|
+| **0**   | Powerup | Motor at 20 steps/sec. Clockwise | Motor at 20 steps/sec. Clockwise | Pass |
+| **1**   | Press B_DIRECTION_ANTICLOCKWISE | Motor turns anticlockwise | Motor turns anticlockwise | Pass |
+| **2**   | Press B_DIRECTION_CLOCKWISE | Motor turns clockwise | Motor turns clockwise | Pass |
+| **3**   | Press B_SPEEDUP | Motor turns faster | Motor turns faster | Pass |
+| **4**   | Press B_SPEEDDOWN 2 times | Motor turns slower | Motor turns slower | Pass |
+
+
 ## Sources
 
 All sources for images are as links in the README.md when view raw.
