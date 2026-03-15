@@ -218,7 +218,7 @@ The animation below demonstrates the internal working principle of a stepper mot
 
 Note that intermediate states where **two coils are energized simultaneously** are not represented in the animation.
 
-![GIF-Inner-Working-Stepper-Motor](https://electricdiylab.com/wp-content/uploads/2019/12/STEPPER-2.gif)
+![GIF-Inner-Working-Stepper-Motor](https://www.amci.com/index.php/download_file/view_inline/2441/)
 
 ---
 
