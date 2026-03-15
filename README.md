@@ -1,5 +1,5 @@
 
-# 01_SchrittMot
+# SchrittMot
 
 ![AVR](https://img.shields.io/badge/Platform-AVR-blue)
 ![Microcontroller](https://img.shields.io/badge/MCU-ATmega2560-green)
@@ -76,7 +76,7 @@ Before building the project, some configuration is required.
 
 Download and place the AVRdude tool from:
 
-https://github.com/ml3rc/01_SchrittMot/tree/main/readme/AVRdude
+https://github.com/GabrielVarao/Schrittmotor/tree/main/readme/AVRdude
 
 into:
 
@@ -90,7 +90,7 @@ Adjust the directory if your Microchip Studio version differs.
 
 Inside Microchip Studio:
 
-Project → 01_SchrittMot Properties
+Project → SchrittMot Properties
 
 Navigate to:
 
