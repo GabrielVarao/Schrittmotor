@@ -1,5 +1,5 @@
 
-# SchrittMot
+# SchrittMotor
 
 ![AVR](https://img.shields.io/badge/Platform-AVR-blue)
 ![Microcontroller](https://img.shields.io/badge/MCU-ATmega2560-green)
